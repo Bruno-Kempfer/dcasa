@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
-    "lint": "eslint .",
-    "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "next build",
+  "predeploy": "npm run build && node ./scripts/create-nojekyll.js",
+    "deploy": "gh-pages -d out"
   },
+
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
@@ -73,5 +72,5 @@
     "tw-animate-css": "1.3.3",
     "typescript": "^5"
   },
-  "homepage": "https://bruno-kempfer.github.io/dcasa/"
+  "homepage": "https://bruno-kempfer.github.io/dcasa"
 }
